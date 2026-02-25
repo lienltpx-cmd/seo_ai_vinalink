@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO 2026: Tăng Khả Năng Hiển Thị Trên AI Search – Vinalink</title>
+
+  <!-- Preloads -->
+  <link as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="preload" />
+
+  <!-- Tailwind (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome (Icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+
+  <style type="text/css">
+    :root {
+      --vinalink-red: #E03232;
+      --vinalink-blue: #3953A4;
+      --vinalink-dark-blue: #1C2A53;
+      --light: #F5F3EF;
+      --gray-600: #4B5563;
+      --gray-400: #9CA3AF;
+      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--light); color: #111827; overflow-x: hidden; line-height: 1.7; }
+    .font-heading { font-family: 'Sora', sans-serif; font-weight: 700; letter-spacing: -0.04em; }
+    .section-padding { padding-top: 100px; padding-bottom: 100px; }
+    @media(min-width: 768px) { .section-padding { padding-top: 140px; padding-bottom: 140px; } }
+    .bg-dark-section { background-color: var(--vinalink-dark-blue); color: var(--light); position: relative; isolation: isolate; }
+    .bg-dark-section .font-heading { color: #fff; }
+    .text-vinalink-blue { color: var(--vinalink-blue); }
+    .bg-vinalink-blue { background-color: var(--vinalink-blue); }
+    .text-vinalink-red { color: var(--vinalink-red); }
+    .bg-vinalink-red { background-color: var(--vinalink-red); }
+
+    .reveal { opacity: 0; transition: opacity 1s, transform 1s; transition-timing-function: var(--transition-smooth); }
+    .reveal-up { transform: translateY(48px); }
+    .reveal.is-visible { opacity: 1; transform: translate(0, 0); }
+    .line-wrapper { overflow: hidden; display: block; padding: 0.1em 0; }
+    .word { display: inline-block; transform: translateY(110%); opacity: 0; transition: transform 1.2s var(--transition-smooth), opacity 1s var(--transition-smooth); }
+    .is-visible .word { transform: translateY(0); opacity: 1; }
+
+    .base-card { background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05); transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth); }
+    .base-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+
+    .hero-section { min-height: 85vh; position: relative; display: flex; align-items: center; justify-content: center; color: #fff; overflow: hidden; }
+    #hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 60%; width: auto; height: auto; z-index: -1; transform: translateX(-50%) translateY(-50%); }
+    .hero-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(28,42,83,0.85), rgba(28,42,83,0.9)); z-index: 1; }
+    .hero-section .container { position: relative; z-index: 2; }
+
+    .data-flow-node { border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); }
+    .data-flow-connector { flex-grow: 1; background: repeating-linear-gradient(90deg, #4b5563, #4b5563 10px, transparent 10px, transparent 20px); height: 2px; min-width: 50px; }
+
+    details > summary { list-style: none; cursor: pointer; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    details > summary::-webkit-details-marker { display: none; }
+    details .answer { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--gray-600); border-top: 1px solid #e5e7eb; padding-top: 1.5rem; margin-top: -0.5rem;}
+    details summary .icon::after { content: '+'; font-size: 1.5rem; transition: transform .3s; color: var(--vinalink-blue); }
+    details[open] summary .icon::after { transform: rotate(45deg); }
+
+    .sticky-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--vinalink-dark-blue);
+      color: white;
+      padding: 1rem;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      z-index: 1000;
+      transform: translateY(100%);
+      transition: transform 0.5s var(--transition-smooth);
+    }
+    .sticky-cta-bar.visible { transform: translateY(0); }
+    .sticky-cta-bar .cta-button {
+      background-color: var(--vinalink-red);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .sticky-cta-bar .cta-button:hover { transform: scale(1.05); }
+    @media(max-width: 768px) {
+      .sticky-cta-bar { flex-direction: column; text-align: center; gap: 0.75rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HERO -->
+  <header class="hero-section">
+    <video id="hero-video" autoplay loop muted playsinline poster="/uploaded/SEO-Ecosystem-Vinalink/seo-conversions-vnl.jpg">
+      <source src="https://vinalink.com/uploaded/SEO-Ecosystem-Vinalink/seo-video-bg-placeholder.mp4" type="video/mp4">
+    </video>
+
+    <div class="relative z-10 container mx-auto px-6 text-center">
+      <h1 class="font-heading text-5xl md:text-6xl text-light reveal">
+        <span class="line-wrapper"><span class="word">SEO</span> <span class="word">2026:</span> <span class="word">AI</span> <span class="word">Có</span> <span class="word">Đang</span> <span class="word">Trích</span> <span class="word">Dẫn</span> <span class="word">Thương</span> <span class="word">Hiệu</span> <span class="word">Của</span> <span class="word">Bạn?</span></span>
+      </h1>
+
+      <div class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-8 reveal reveal-up" data-reveal-delay="200">
+        <p class="font-semibold text-white">Kỷ nguyên "10 link xanh" đang thay đổi. Nhiều khách hàng giờ hỏi trực tiếp ChatGPT, Gemini hay Perplexity thay vì search truyền thống.</p>
+        <p class="mt-2 text-gray-400">Chúng tôi giúp doanh nghiệp tăng khả năng được AI nhận diện và trích dẫn một cách tự nhiên, dựa trên dữ liệu thực tế và tối ưu dần dần.</p>
+      </div>
+
+      <div class="mt-12 reveal reveal-up flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal-delay="400">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header"
+           class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg text-white transition-transform duration-300 hover:-translate-y-1"
+           style="background-color: var(--vinalink-red);">
+          <i class="fa-solid fa-calendar-check mr-3"></i>
+          Nhận Phân Tích AI Visibility Audit
+        </a>
+      </div>
+
+      <p class="text-gray-400 text-sm mt-4 text-center">
+        Kết quả phụ thuộc baseline hiện tại, chất lượng dữ liệu và cập nhật từ các mô hình AI.
+      </p>
+
+      <p class="text-gray-400 text-sm mt-6 text-center">
+        Trust Badges: <img src="/uploaded/SEO-Ecosystem-Vinalink/logo/openai.png" alt="OpenAI" class="inline w-8 opacity-50 mx-1"> 
+        <img src="/uploaded/SEO-Ecosystem-Vinalink/logo/gemini.png" alt="Google Gemini" class="inline w-8 opacity-50 mx-1"> 
+        <img src="/uploaded/SEO-Ecosystem-Vinalink/logo/anthropic.png" alt="Anthropic Claude" class="inline w-8 opacity-50 mx-1"> 
+        <img src="/uploaded/SEO-Ecosystem-Vinalink/logo/perplexity.png" alt="Perplexity" class="inline w-8 opacity-50 mx-1">
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <!-- PARADIGM SHIFT -->
+    <section id="paradigm-shift" class="section-padding">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2 class="font-heading text-4xl md:text-5xl reveal reveal-up">Sự Thay Đổi Trong Search Marketing – Cơ Hội & Thách Thức</h2>
+          <p class="mt-6 text-xl text-gray-700 reveal reveal-up" data-reveal-delay="100">
+            Nếu chỉ tối ưu cho Google truyền thống, thương hiệu có thể bị giảm khả năng hiển thị trước người dùng AI.
+          </p>
+        </div>
+
+        <div class="mt-20 max-w-6xl mx-auto reveal reveal-up" data-reveal-delay="200">
+          <table class="w-full border-collapse text-left text-sm md:text-base">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-4 font-semibold">Tiêu chí</th>
+                <th class="p-4 font-semibold">SEO Truyền Thống</th>
+                <th class="p-4 font-semibold">Tối Ưu Cho AI Search (2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b"><td class="p-4">Mục tiêu chính</td><td class="p-4">Lên top Google</td><td class="p-4">Tăng khả năng được AI trích dẫn / đề cập</td></tr>
+              <tr class="border-b"><td class="p-4">Metric quan trọng</td><td class="p-4">Traffic, CTR, ranking</td><td class="p-4">Brand mentions, citation rate, share of voice (theo dõi dần)</td></tr>
+              <tr class="border-b"><td class="p-4">Kỹ thuật trọng tâm</td><td class="p-4">Từ khóa + backlinks</td><td class="p-4">Structured data, entity optimization, nội dung chất lượng cao</td></tr>
+              <tr class="border-b"><td class="p-4">Hành vi người dùng</td><td class="p-4">Tự tìm & đọc</td><td class="p-4">AI tổng hợp & gợi ý</td></tr>
+              <tr><td class="p-4">Rủi ro</td><td class="p-4">Update algorithm</td><td class="p-4">Kết quả phụ thuộc update LLM & chất lượng dữ liệu</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-center mt-10 reveal reveal-up" data-reveal-delay="450">
+          <a href="#solution" class="inline-flex items-center gap-2 font-semibold text-vinalink-blue hover:underline">
+            Chúng tôi hỗ trợ như thế nào? <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTRY CONDITIONS -->
+    <section id="entry-conditions" class="section-padding bg-dark-section">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto reveal reveal-up">
+          <h2 class="font-heading text-4xl md:text-5xl">Dịch Vụ Phù Hợp Với Một Số Doanh Nghiệp Nhất Định</h2>
+          <p class="mt-6 text-xl text-gray-300">
+            Để đạt kết quả tốt nhất với nguồn lực hiện tại, chúng tôi ưu tiên dự án đáp ứng các điều kiện cơ bản sau (có thể hỗ trợ cải thiện nếu gần đạt):
+          </p>
+        </div>
+
+        <div class="mt-16 max-w-6xl mx-auto flex flex-col md:flex-row items-stretch justify-center gap-6">
+          <div class="data-flow-node flex-1 p-8 rounded-2xl text-center md:text-left">
+            <i class="fa-solid fa-laptop-code text-5xl text-vinalink-red mb-6"></i>
+            <h3 class="font-heading text-2xl mb-3">Machine Readability ≥ 85</h3>
+            <p class="text-gray-300 text-base leading-relaxed">
+              Hạ tầng website đạt chuẩn kỹ thuật cao, AI dễ crawl và hiểu nội dung.
+            </p>
+          </div>
+
+          <div class="hidden md:flex items-center"><div class="data-flow-connector w-24"></div></div>
+          <div class="md:hidden flex justify-center my-6"><i class="fa-solid fa-arrow-down text-4xl text-gray-400"></i></div>
+
+          <div class="data-flow-node flex-1 p-8 rounded-2xl text-center md:text-left">
+            <i class="fa-solid fa-fingerprint text-5xl text-vinalink-red mb-6"></i>
+            <h3 class="font-heading text-2xl mb-3">Entity Framework Baseline</h3>
+            <p class="text-gray-300 text-base leading-relaxed">
+              Đã có nền tảng định danh thực thể rõ ràng trên Internet.
+            </p>
+          </div>
+
+          <div class="hidden md:flex items-center"><div class="data-flow-connector w-24"></div></div>
+          <div class="md:hidden flex justify-center my-6"><i class="fa-solid fa-arrow-down text-4xl text-gray-400"></i></div>
+
+          <div class="data-flow-node flex-1 p-8 rounded-2xl text-center md:text-left">
+            <i class="fa-solid fa-database text-5xl text-vinalink-red mb-6"></i>
+            <h3 class="font-heading text-2xl mb-3">Data Nguồn Độc Quyền</h3>
+            <p class="text-gray-300 text-base leading-relaxed">
+              Có case study, review thật, báo cáo ngành – nguyên liệu sạch để tối ưu.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-400 mt-8 text-center">
+          *Nếu chưa đạt, chúng tôi có gói Diagnostic để đánh giá và đề xuất bước cải thiện đầu tiên.
+        </p>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" class="section-padding">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto reveal reveal-up">
+          <h2 class="font-heading text-4xl md:text-5xl">Cách Chúng Tôi Hỗ Trợ Tăng Khả Năng Hiển Thị Trên AI Search</h2>
+          <p class="mt-4 text-xl text-gray-600">Các bước thực tế, dựa trên dữ liệu và thử nghiệm dần dần:</p>
+        </div>
+
+        <div class="mt-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="base-card p-8 hover:border-vinalink-red transition-all">
+            <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-brain text-3xl text-vinalink-red"></i>
+            </div>
+            <h3 class="font-heading text-2xl mb-3">🧠 Prompt Testing & Simulation</h3>
+            <p class="text-gray-600">Thử nghiệm các truy vấn phổ biến để hiểu AI đang trả lời thế nào về thương hiệu bạn, từ đó điều chỉnh nội dung phù hợp hơn.</p>
+          </div>
+
+          <div class="base-card p-8 hover:border-vinalink-red transition-all">
+            <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-link text-3xl text-vinalink-red"></i>
+            </div>
+            <h3 class="font-heading text-2xl mb-3">🔗 Tối Ưu Citation & Structured Data</h3>
+            <p class="text-gray-600">Cải thiện schema, answer blocks, bảng so sánh để tăng cơ hội được AI tham chiếu tự nhiên.</p>
+          </div>
+
+          <div class="base-card p-8 hover:border-vinalink-red transition-all">
+            <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-file-lines text-3xl text-vinalink-red"></i>
+            </div>
+            <h3 class="font-heading text-2xl mb-3">📈 Nội Dung Chất Lượng & Cập Nhật</h3>
+            <p class="text-gray-600">Xây dựng nội dung có dữ liệu thật, schema rõ ràng, cập nhật định kỳ để duy trì độ tin cậy với AI.</p>
+          </div>
+
+          <div class="base-card p-8 hover:border-vinalink-red transition-all">
+            <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-chart-line text-3xl text-vinalink-red"></i>
+            </div>
+            <h3 class="font-heading text-2xl mb-3">📊 Theo Dõi & Báo Cáo Hàng Tháng</h3>
+            <p class="text-gray-600">Dashboard đơn giản theo dõi mentions/citations trên các AI chính, kèm gợi ý điều chỉnh dựa trên dữ liệu thực tế.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section-padding">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 journey-sticky-container">
+          <div class="lg:col-span-1 reveal reveal-up">
+            <div class="journey-sticky-content">
+              <h2 class="font-heading text-4xl md:text-5xl">Lộ Trình Hỗ Trợ Thực Tế (Thường 6–12 Tháng)</h2>
+              <p class="mt-6 text-xl text-gray-600">
+                Các giai đoạn được thiết kế để cải thiện dần dần, dựa trên baseline thực tế của từng dự án.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 space-y-16">
+            <div class="reveal reveal-up">
+              <div class="base-card">
+                <p class="font-semibold text-gray-500 text-sm">Tháng 1</p>
+                <h3 class="font-heading text-2xl mt-2 text-vinalink-blue">Baseline & Audit</h3>
+                <ul class="mt-3 text-gray-700 text-sm space-y-1">
+                  <li>• Quét độ phủ thương hiệu trên các AI phổ biến.</li>
+                  <li>• Đánh giá entity và structured data hiện tại.</li>
+                </ul>
+                <p class="mt-4 font-semibold text-sm text-green-600">Output: Báo cáo baseline rõ ràng để theo dõi tiến triển.</p>
+              </div>
+            </div>
+
+            <div class="reveal reveal-up">
+              <div class="base-card">
+                <p class="font-semibold text-gray-500 text-sm">Tháng 2–3</p>
+                <h3 class="font-heading text-2xl mt-2 text-vinalink-blue">Tối Ưu Citation & Nội Dung</h3>
+                <ul class="mt-3 text-gray-700 text-sm space-y-1">
+                  <li>• Cải thiện schema và cấu trúc nội dung.</li>
+                  <li>• Bổ sung dữ liệu chất lượng cao (case, review).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="reveal reveal-up">
+              <div class="base-card">
+                <p class="font-semibold text-gray-500 text-sm">Tháng 4–6</p>
+                <h3 class="font-heading text-2xl mt-2 text-vinalink-blue">Theo Dõi & Điều Chỉnh</h3>
+                <ul class="mt-3 text-gray-700 text-sm space-y-1">
+                  <li>• Test prompt và theo dõi thay đổi.</li>
+                  <li>• Báo cáo hàng tháng + gợi ý cải thiện.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="reveal reveal-up">
+              <div class="base-card">
+                <p class="font-semibold text-gray-500 text-sm">Tháng 6+</p>
+                <h3 class="font-heading text-2xl mt-2 text-vinalink-blue">Duy Trì & Mở Rộng</h3>
+                <ul class="mt-3 text-gray-700 text-sm space-y-1">
+                  <li>• Cập nhật định kỳ theo thay đổi LLM.</li>
+                  <li>• Mở rộng nếu kết quả ổn định.</li>
+                </ul>
+                <p class="mt-4 font-semibold text-sm text-green-600">Kết quả thường bắt đầu thấy sau 60–90 ngày (tùy baseline), cải thiện rõ hơn sau 4–6 tháng nếu duy trì đều đặn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPI -->
+    <section id="kpi" class="section-padding bg-dark-section">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal reveal-up">
+            <h2 class="font-heading text-4xl md:text-5xl">Chúng Tôi Tập Trung Theo Dõi Các Chỉ Số Thực Tế</h2>
+            <ul class="mt-8 space-y-4 text-gray-200">
+              <li class="flex items-start"><i class="fa-solid fa-arrow-trend-up text-2xl text-vinalink-red mr-4"></i><div><strong>Khả năng được AI đề cập (Brand Mentions):</strong> Tăng dần tần suất thương hiệu xuất hiện trong câu trả lời AI cho các truy vấn liên quan.</div></li>
+              <li class="flex items-start"><i class="fa-solid fa-arrow-trend-up text-2xl text-vinalink-red mr-4"></i><div><strong>Tỷ lệ trích dẫn (Citation Rate):</strong> Cải thiện khả năng nội dung được AI dùng làm nguồn tham khảo (theo dõi so với baseline).</div></li>
+              <li class="flex items-start"><i class="fa-solid fa-arrow-trend-up text-2xl text-vinalink-red mr-4"></i><div><strong>Share of Voice tương đối:</strong> Theo dõi vị thế so với đối thủ trong một số truy vấn chính (không cam kết số cụ thể).</div></li>
+              <li class="flex items-start"><i class="fa-solid fa-arrow-trend-up text-2xl text-vinalink-red mr-4"></i><div><strong>Tín hiệu gián tiếp:</strong> Brand search tăng, direct traffic từ AI (nếu có), hoặc task completion sau khi AI gợi ý.</div></li>
+            </ul>
+
+            <p class="mt-6 text-gray-300">
+              Kết quả thực tế phụ thuộc vào: baseline hiện tại, chất lượng dữ liệu khách hàng cung cấp, cập nhật từ các mô hình AI, và cạnh tranh ngành. Chúng tôi cam kết minh bạch báo cáo & điều chỉnh hàng tháng, không cam kết con số cố định.
+            </p>
+          </div>
+          <div class="reveal reveal-up" data-reveal-delay="200">
+            <img src="https://vinalink.com/uploaded/SEO-Ecosystem-Vinalink/seo-chuyen-doi.png" alt="AI Visibility Dashboard" class="rounded-xl shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="section-padding bg-gray-100" id="packages">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-10 max-w-3xl mx-auto reveal reveal-up">
+          <h2 class="font-heading text-4xl md:text-5xl mb-3">Các Gói Dịch Vụ</h2>
+          <p class="text-gray-600">Giá tham khảo – có thể điều chỉnh tùy dự án. Bắt đầu từ gói Diagnostic hoặc Starter để kiểm tra tính khả thi.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
+          <div class="base-card flex flex-col h-full package-card reveal reveal-up" data-reveal-delay="100">
+            <h3 class="font-heading text-3xl">Starter</h3>
+            <p class="text-gray-600 my-4"><strong>AI Visibility Snapshot™</strong></p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Audit toàn diện + Baseline + Gợi ý quick wins.</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Phù hợp kiểm tra ban đầu.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <p class="text-gray-500"><strong class="text-2xl font-heading text-gray-800">10–20 triệu (1 lần)</strong></p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header"
+                 class="mt-4 block text-center w-full py-3 rounded-lg font-semibold border-2 border-gray-300 text-gray-600 hover:bg-gray-200 transition">
+                Bắt đầu →
+              </a>
+            </div>
+          </div>
+
+          <div class="base-card flex flex-col h-full package-card reveal reveal-up relative" data-reveal-delay="200">
+            <span class="bg-vinalink-blue text-white text-xs font-bold px-3 py-1 rounded-full absolute top-4 right-4">KHẨN DÙNG</span>
+            <h3 class="font-heading text-3xl">Core</h3>
+            <p class="text-gray-600 my-4"><strong>AI Search Optimization™</strong></p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Retainer 6–12 tháng, tối ưu liên tục.</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Theo dõi & điều chỉnh hàng tháng.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <p class="text-gray-500"><strong class="text-2xl font-heading text-vinalink-blue">15–35 triệu / tháng</strong></p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header"
+                 class="mt-4 block text-center w-full py-4 rounded-lg font-semibold text-white transition-transform duration-300 hover:scale-105 bg-vinalink-blue">
+                Tư vấn →
+              </a>
+            </div>
+          </div>
+
+          <div class="base-card flex flex-col h-full package-card reveal reveal-up" data-reveal-delay="300">
+            <h3 class="font-heading text-3xl">Advanced</h3>
+            <p class="text-gray-600 my-4"><strong>Multi-Market Optimization™</strong></p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Triển khai đa thị trường (nếu cần).</li>
+              <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Tăng cường theo dõi trên nhiều nền tảng AI.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <p class="text-gray-500"><strong class="text-2xl font-heading text-vinalink-red">25–50 triệu / tháng</strong></p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header"
+                 class="mt-4 block text-center w-full py-3 rounded-lg font-semibold border-2 border-red-500 text-red-600 hover:bg-vinalink-red hover:text-white transition">
+                Đặt lịch →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding bg-gray-100" id="faq">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto reveal reveal-up">
+          <h2 class="font-heading text-4xl md:text-5xl mb-6">Câu Hỏi Thường Gặp</h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto mt-12 bg-white rounded-xl shadow-lg reveal reveal-up" data-reveal-delay="100">
+          <details>
+            <summary><span class="font-heading text-xl">Kết quả có chắc chắn tăng X% không?</span><span class="icon"></span></summary>
+            <div class="answer">
+              Không cam kết con số cụ thể vì phụ thuộc nhiều yếu tố ngoài kiểm soát (update LLM, dữ liệu khách hàng, cạnh tranh). Chúng tôi cam kết nỗ lực tối ưu liên tục và báo cáo minh bạch để cùng theo dõi tiến triển thực tế.
+            </div>
+          </details>
+
+          <details>
+            <summary><span class="font-heading text-xl">Mất bao lâu để thấy thay đổi?</span><span class="icon"></span></summary>
+            <div class="answer">
+              Thường thấy dấu hiệu ban đầu (như mentions tăng nhẹ) sau 60–90 ngày, cải thiện rõ hơn sau 4–6 tháng nếu duy trì đều đặn. Không phải kết quả nhanh như SEO truyền thống.
+            </div>
+          </details>
+
+          <details>
+            <summary><span class="font-heading text-xl">Nếu AI thay đổi thuật toán thì sao?</span><span class="icon"></span></summary>
+            <div class="answer">
+              Chúng tôi theo dõi cập nhật từ các mô hình lớn và điều chỉnh chiến lược hàng tháng dựa trên dữ liệu thực tế, thay vì chờ đợi thụ động.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section-padding bg-dark-section" id="final-cta">
+      <div class="container mx-auto px-6 text-center max-w-4xl mx-auto reveal reveal-up">
+        <h2 class="font-heading text-4xl md:text-5xl text-white">Sẵn Sàng Kiểm Tra Khả Năng Hiển Thị Trên AI Của Thương Hiệu Bạn?</h2>
+        <p class="mt-6 text-xl text-gray-300">Chúng tôi bắt đầu bằng audit thực tế để đánh giá baseline và đề xuất hướng đi phù hợp.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header"
+           class="mt-8 inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg text-white transition-transform duration-300 hover:-translate-y-1"
+           style="background-color: var(--vinalink-red);">
+          <i class="fa-solid fa-calendar-check mr-3"></i>
+          Đặt Lịch Audit & Tư Vấn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- STICKY CTA -->
+  <div id="sticky-cta" class="sticky-cta-bar">
+    <p class="hidden md:block">Sẵn sàng kiểm tra baseline AI visibility?</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqxafXG_CAUYkTt12jsI4ltJEF7xahfVXV0hSJl5gmG5eXAQ/viewform?usp=header" class="cta-button">
+      <i class="fa-solid fa-stethoscope"></i>
+      Yêu Cầu Audit →
+    </a>
+  </div>
+
+  <script>
+    // Reveal animation
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      const delay = el.dataset.revealDelay || 0;
+      el.style.transitionDelay = `${delay}ms`;
+      const words = el.querySelectorAll('.word');
+      if (words.length > 0) {
+        words.forEach((word, index) => {
+          word.style.transitionDelay = `${parseInt(delay) + index * 50}ms`;
+        });
+      }
+      revealObserver.observe(el);
+    });
+
+    // Sticky CTA
+    const stickyCTA = document.getElementById('sticky-cta');
+    function toggleStickyCTA() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const scrollable = docHeight - winHeight;
+      const progress = scrollable > 0 ? (scrollTop / scrollable) : 1;
+      if (progress >= 0.5) {
+        stickyCTA.classList.add('visible');
+      } else {
+        stickyCTA.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', toggleStickyCTA, { passive: true });
+    window.addEventListener('resize', toggleStickyCTA);
+    toggleStickyCTA();
+  </script>
+</body>
+</html>
